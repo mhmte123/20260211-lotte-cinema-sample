@@ -274,8 +274,9 @@ header .inner{
 .preview .img-box::before {
     content: "";
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 0%;
+    height: 2px;
+    background: #da291c;
     position: absolute;
     z-index: 99;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
@@ -368,6 +369,7 @@ header .inner{
 
 .NuriCard .NuriCard-top {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 24px;
     padding: 33px 31px 10px 40px;
@@ -376,6 +378,15 @@ header .inner{
 
 .NuriCard .NuriCard-top {
     display: flex;
+    position: relative;
+    border: 2px solid #fff;
+}
+
+header .main-menu>li {
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
     align-items: center;
     gap: 24px;
     padding: 33px 31px 10px 40px;
@@ -435,6 +446,12 @@ header .inner{
 
 .TossPay .TossPay-top {
     display: flex;
+    gap: 47px;
+}
+
+.event-wrap .event-name-search {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 16px;
     position: absolute;
@@ -459,6 +476,7 @@ header .inner{
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 .TossPay .TossPay-bottom p {
