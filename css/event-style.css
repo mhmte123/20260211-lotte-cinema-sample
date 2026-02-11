@@ -1,0 +1,131 @@
+body {
+    font-size: 16px;
+}
+
+/* header */
+header {
+    height: auto;
+    background-color: rgba(248, 248, 248, 0.5);
+}
+
+.inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 0 20px;
+}
+
+header>.inner {
+    background-color: rgba(255, 255, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+.ham-btn {
+    display: none;
+}
+
+header .header-right img {
+    /* height: 54px; */
+    /* max-height: 54px; */
+    /* width: 18.75em; */
+    max-width: 300px;
+}
+
+header .main-menu {
+    display: flex;
+    position: relative;
+    border: 2px solid #fff;
+}
+
+header .main-menu>li {
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
+    align-items: center;
+    padding: 10px 10px;
+    position: relative;
+}
+
+header .main-menu>li>a {
+    display: block;
+}
+
+header .main-menu>li:hover .sub-wrap {
+    display: block;
+
+}
+
+header .main-menu>li:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    background: #DA291C;
+    /* border-bottom: 3px solid #DA291C; */
+    bottom: 0;
+    left: 0;
+}
+
+header .main-menu .sub-wrap {
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+
+header .main-menu .sub-menu {
+    display: flex;
+    /* background-color: aqua; */
+    gap: 20px;
+}
+
+/* 메뉴사이즈 20px 소메뉴 16px 푸터 14px*/
+
+header .main-menu .sub-menu>li:hover {
+    color: #DA291C
+}
+
+header .gnb-list {
+    display: flex;
+    gap: 1.25em;
+}
+
+/* 강력추천 이벤트 */
+.banner {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+main section>h2 {
+    font-size: 2.25em;
+}
+
+main .event-arco-list {
+    display: flex;
+}
+
+.event-arco-list>li {
+    position: relative;
+}
+
+.event-arco-list li::after {
+    content: "";
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0));
+
+}
+
+.event-arco-list .text-box {
+    /* background-color: aqua; */
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+}

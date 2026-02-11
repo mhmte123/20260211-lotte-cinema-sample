@@ -1,6 +1,6 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -27,9 +27,32 @@ i {
 
 .blind {
     position: absolute;
-    top: -9999px;
+    top: -99999px;
+
 }
 
 body {
+    color: #fff;
+    background: #121212;
     font-family: "Pretendard", sans-serif;
+    /* width: 1920px; */
+    /* justify-content: center; */
+    max-width: 1920px;
+}
+
+::selection {
+    background: white;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #161616;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DA291C;
+    border-radius: 10px;
 }
