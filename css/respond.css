@@ -1,65 +1,97 @@
-/* ipad */
-@media screen and (max-width:1280px) {
+@media screen and (max-width:768px) {
     body {
-        font-size: 14px;
+        font-size: 12px;
     }
 
-    header {
-        height: 60px;
+    .inner {
+        overflow: hidden;
     }
 
-
-    header .main-menu {
-        display: block;
-        position: fixed;
-        left: 20px;
-        top: 60px;
-        background: #222;
-        z-index: 1000;
+    .event-wrap-inner {
+        flex-wrap: wrap;
     }
 
-
-
-    .ham-btn {
-        display: block;
-    }
-
-    header .main-menu>li {
-        padding: 10px;
-    }
-
-    .main-menu>li>a {
-        color: #fff;
-        /* padding: 20px; */
-    }
-
-    header .main-menu .sub-wrap {
-        position: static;
-        /* background-color: aqua; */
-    }
-
-    header .main-menu .sub-menu {
-        display: block;
-    }
-
-    header .main-menu>li:hover::after {
-        content: "";
+    .arrow-btn>li>a {
         display: none;
-        /* padding: 0; */
     }
 
-    .upcoming-list {
-        background-color: rgba(0, 255, 0, 0.15);
+    .event-left {
+        padding: 0;
+    }
+
+    .event-slider {
+        /* width: calc(100% * 6 / 1); */
+        /* margin-left: calc(-26% - 20px); */
+    }
+
+    .event-slider>li {
+        flex: 0 0 calc(100% / 1);
+        padding: 0 20px;
+    }
+
+    .event-slider>li>a .img-box {
+        aspect-ratio: 1/0.6;
+    }
+
+    .event-slider .main .img-box {
+        transform: none;
+    }
+
+    .event-right {
         display: flex;
-        width: calc(100% * 10 / 3 + 2em);
-        margin: 0 auto;
-        gap: 2em;
+        gap: 12px;
+        width: 100%;
+        /* border: 1px solid; */
+    }
+
+    .preview {
+        width: 50%;
+        /* background: #fff; */
+        margin: 0;
+    }
+
+    .sale {
+        width: 50%;
+        /* background: #fff; */
+    }
+
+    .sale-list {
+        display: block;
+    }
+
+    .preview .img-box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .NuriCard {
+        width: 100%;
+    }
+
+    .NuriCard .NuriCard-img {
+        width: 80%;
     }
 
 
+    .NuriCard .NuriCard-mid img {
+        width: 15%;
+    }
 
+    .NuriCard .NuriCard-top>span {
+        font-size: 2em;
+    }
+
+    .NuriCard .NuriCard-mid>p {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .TossPay {
+        display: none;
+    }
+
+    .info-list {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
 }
-
-
-
-/* mobile */
