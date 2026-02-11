@@ -1,3 +1,122 @@
+/* 공통영역 */
+.inner {
+    width: calc(1920px - 320px);
+    margin: 0 auto;
+    background-color: rgba(255, 0, 0, 0.08);
+}
+
+body {
+    background-color: #121212;
+    width: 100vw;
+    height: 400vh;
+    color: white;
+}
+
+/* header */
+header {
+    background: rgba(0, 0, 0, 0.65);
+    padding-top: 48px;
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 24px; */
+    padding: 4px 48px;
+
+}
+
+/* 로고 */
+header .main-logo {
+    width: 200px;
+}
+
+/* 메인메뉴 */
+
+.main-menu {
+    display: flex;
+    padding: 0 12px;
+    gap: 14px;
+    position: relative;
+}
+
+.main-menu>li {
+    position: relative;
+    /* 서브 메뉴의 기준점 */
+    /* display: block; */
+    padding: 12px 10px;
+    line-height: 1.5;
+    border-bottom: 2px solid transparent;
+    /* transition: ease-in-out; */
+    /* background-color: rgba(255, 0, 0, 0.08); */
+}
+
+/* 메인메뉴 hover */
+
+.main-menu>li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #da291c;
+    position: absolute;
+    /* 선이 가운데에서 효과 시작하기 */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: ease-in-out 0.3s;
+}
+
+.main-menu>li:hover::after {
+    width: 100%;
+}
+
+
+/* 서브메뉴 */
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 100vw; */
+    /* background-color: rgba(255, 0, 0, 0.08); */
+    padding: 12px 0;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.main-menu>li:hover .sub-menu-wrap {
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 헤더 우측 메뉴 */
+.header-side-menu {
+    display: flex;
+    gap: 12px;
+}
+
+.header-side-menu>li>a>span {
+    position: absolute;
+    top: -99999px;
+}
+
+
+
+
+
+/* 메인 슬라이드 */
 .main-slider-wrap {}
 
 .main-slider-wrap .inner {
@@ -198,4 +317,226 @@
 
 .arrow-btn .right-btn {
     right: 300px;
+}
+
+
+
+
+
+
+/* 본문 */
+.curator-part {
+    margin: 50px 0;
+}
+
+.curator-part>.inner {
+    padding: 0 10px;
+}
+
+.curator-part>.inner>h2 {
+    font-size: 2.25em;
+}
+
+/* curator-menu */
+.curator-menu {
+    display: flex;
+    /* gap: 24px; */
+    margin: 24px 0;
+    align-items: center;
+}
+
+.curator-menu>li {
+    position: relative;
+    padding: 0 12px;
+}
+
+.curator-menu>li:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.curator-menu>li>a {
+    display: block;
+    padding: 8px 20px;
+    transition: 0.18s ease-in-out;
+    font-size: 1.25em;
+}
+
+.curator-menu>li>a:hover {
+    color: #da291c;
+    font-weight: 700;
+}
+
+/* curator-moive-inner-wrap - 숨김처리 하는 영역*/
+
+/* curator-moive-set - 추천영화 리스트 아이템*/
+.curator-moive-set {
+    display: flex;
+    gap: 24px;
+}
+
+/* 추천 리스트 아이템 1번 */
+/* curator-moive-item */
+.curator-moive-item {
+    display: flex;
+    gap: 10px;
+}
+
+/* 추천 리스트 아이템 - 영화 포스터*/
+.curator-moive-poster {
+    max-width: 385px;
+    object-fit: cover;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.curator-moive-poster>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 추천 리스트 아이템 - 우측영역 세로 정렬 */
+.curator-moive-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+/* 추천 리스트 아이템 - 제목*/
+.curator-moive-info .title-wrap {
+    display: flex;
+    /* gap: 12px; */
+    align-items: center;
+}
+
+.curator-moive-info .title-wrap>h3 {
+    font-size: 2.25em;
+}
+
+.curator-moive-info .title-wrap>span {
+    width: 1.5em;
+    aspect-ratio: 1/1;
+}
+
+/* 추천 리스트 아이템 - 한줄평*/
+.curator-moive-info .comment-wrap {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    /* margin: 1.25em 0; */
+}
+
+.curator-moive-info .comment-wrap>span {
+    width: 1em;
+    aspect-ratio: 1/1;
+}
+
+.curator-moive-info .comment-wrap>p {
+    font-size: 1.25em;
+}
+
+/* 추천 리스트 아이템 - 영화내용*/
+.curator-moive-info .plot-info {
+    font-size: 1.125em;
+    color: #cbcbcb;
+}
+
+/* 하단 영화 알아보기 버튼 */
+.curator-moive-act-wrap {
+    display: flex;
+    gap: 12px;
+}
+
+.curator-moive-act-wrap>li>a {
+    display: block;
+    padding: 12px 40px;
+    border: 1px solid white;
+    border-radius: 100px;
+    /* margin-top: 10px; */
+}
+
+.curator-moive-act-wrap>li.accent>a {
+    border-color: transparent;
+    background-color: #da291c;
+    font-weight: 700;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 실제적용 */
+    background: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+}
+
+
+footer>.inner {
+    padding: 0 20px;
+    margin: 10px auto;
+}
+
+/* footer - 상단 */
+.footer-top {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 10px;
+
+}
+
+.search-form {
+    border: 1px solid white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 5px 10px;
+}
+
+.search-form button,
+.search-form input {
+    background: none;
+    border: none;
+}
+
+.search-form input {
+    font-family: inherit;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* footer - 하단 */
+.footer-buttom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.family-award {
+    display: flex;
+}
+
+.family-award .text-box {
+    font-size: 0.875em;
+}
+
+.sns-list {
+    display: flex;
+    gap: 20px;
 }
